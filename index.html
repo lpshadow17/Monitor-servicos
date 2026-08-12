@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monitor de Saúde</title>
+
+<style>
+body{
+    margin:0;
+    background:#0f172a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+}
+
+.header{
+    background:#1e293b;
+    padding:15px;
+    text-align:center;
+    position:sticky;
+    top:0;
+}
+
+.header h2{
+    margin:0;
+}
+
+.status-geral{
+    margin:15px;
+    padding:15px;
+    border-radius:12px;
+    background:#1e293b;
+    text-align:center;
+}
+
+.status-ok{
+    color:#22c55e;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.card{
+    margin:15px;
+    background:#1e293b;
+    border-radius:12px;
+    padding:15px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+td{
+    padding:12px;
+    border-bottom:1px solid #334155;
+}
+
+.green{color:#22c55e;}
+.yellow{color:#fbbf24;}
+.red{color:#ef4444;}
+
+.metric{
+    display:flex;
+    justify-content:space-between;
+    padding:8px 0;
+}
+
+.live-feed{
+    max-height:250px;
+    overflow-y:auto;
+}
+
+.feed-item{
+    border-left:4px solid #22c55e;
+    padding:8px;
+    margin-bottom:10px;
+    background:#0f172a;
+    border-radius:5px;
+}
+
+.footer{
+    text-align:center;
+    padding:10px;
+    color:#94a3b8;
+    font-size:12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h2>📡 Monitor de Saúde</h2>
+</div>
+
+<div class="status-geral">
+    <div>Status Geral</div>
+    <div class="status-ok">🟢 OPERAÇÃO NORMAL</div>
+</div>
+
+<div class="card">
+<h3>Mapa de Saúde</h3>
+
+<table>
+<tr>
+<td>Vivo</td>
+<td class="green">🟢 Normal</td>
+</tr>
+
+<tr>
+<td>Claro</td>
+<td class="green">🟢 Normal</td>
+</tr>
+
+<tr>
+<td>Oracle Cloud</td>
+<td class="green">🟢 Operacional</td>
+</tr>
+
+<tr>
+<td>AWS</td>
+<td class="yellow">🟡 Atenção</td>
+</tr>
+
+<tr>
+<td>Google Cloud</td>
+<td class="green">🟢 Operacional</td>
+</tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Métricas</h3>
+
+<div class="metric">
+<span>Usuários Online</span>
+<strong>24.532</strong>
+</div>
+
+<div class="metric">
+<span>Tempo de Resposta</span>
+<strong>312 ms</strong>
+</div>
+
+<div class="metric">
+<span>Disponibilidade Geral</span>
+<strong>99,72%</strong>
+</div>
+
+<div class="metric">
+<span>Incidentes Ativos</span>
+<strong>1</strong>
+</div>
+
+</div>
+
+<div class="card">
+<h3>📢 Métricas em Tempo Real</h3>
+
+<div class="live-feed">
+
+<div class="feed-item">
+18:40 | AWS | Aumento de relatos detectados
+</div>
+
+<div class="feed-item">
+18:39 | Oracle Cloud | Operação normal
+</div>
+
+<div class="feed-item">
+18:38 | GCP | Operação normal
+</div>
+
+<div class="feed-item">
+18:37 | Vivo | Monitoramento ativo
+</div>
+
+<div class="feed-item">
+18:36 | Claro | Monitoramento ativo
+</div>
+
+</div>
+</div>
+
+<div class="footer">
+Atualização automática a cada 60 segundos
+</div>
+
+</body>
+</html>

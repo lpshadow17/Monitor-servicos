@@ -16,6 +16,22 @@
     padding:0;
     box-sizing:border-box;
 }
+    <script>
+fetch('status.json')
+.then(response => response.json())
+.then(data => {
+
+    document.getElementById('ms-status').innerHTML =
+        data.microsoft == 'green'
+        ? '🟢 Operacional'
+        : '🔴 Indisponível';
+
+    document.getElementById('ultimaAtualizacao').innerText =
+        data.ultimaAtualizacao;
+
+});
+</script>
+    
 
 body{
     background:#0f172a;
